@@ -573,7 +573,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6048148089731586529, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
 --- !u!1001 &6329629063344283929
 PrefabInstance:
@@ -768,5 +769,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapons
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5607398941669324003, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}

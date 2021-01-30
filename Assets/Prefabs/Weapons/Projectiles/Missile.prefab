@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 472527021832427137}
   - component: {fileID: 4272776014725137567}
-  - component: {fileID: 7511236635658393894}
-  - component: {fileID: 7298844911697646316}
-  - component: {fileID: 6541064516462741724}
+  - component: {fileID: -971976715420497626}
+  - component: {fileID: 3557129729764546628}
+  - component: {fileID: -3344997858313412678}
   - component: {fileID: -104512796408828188}
   - component: {fileID: 8027666936317447660}
   - component: {fileID: 2869250547574237537}
@@ -54,9 +54,9 @@ MonoBehaviour:
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  speed: 10
-  turnSpeed: 5
---- !u!114 &7511236635658393894
+  speed: 15
+  turnSpeed: 10
+--- !u!114 &-971976715420497626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7298844911697646316
+--- !u!114 &3557129729764546628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,10 +77,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 472527021832427138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a53a323897f534d87b3702823b72be, type: 3}
+  m_Script: {fileID: 11500000, guid: dcc2de621d39c0942a12501c6c01c234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6541064516462741724
+  layers:
+    serializedVersion: 2
+    m_Bits: 512
+  radius: 10
+--- !u!114 &-3344997858313412678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +99,7 @@ MonoBehaviour:
   destroyOn: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 2560
+    m_Bits: 512
 --- !u!114 &-104512796408828188
 MonoBehaviour:
   m_ObjectHideFlags: 0

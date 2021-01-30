@@ -58,6 +58,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42dc53271c972994382a45bf96702b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireForce: 300
+  launchForce: 300
   numProjectiles: 5
   angle: 90
