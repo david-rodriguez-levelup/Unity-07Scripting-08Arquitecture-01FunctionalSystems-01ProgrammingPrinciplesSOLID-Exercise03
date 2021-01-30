@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FindNearestObjectByLayer : MonoBehaviour
+public class LayerBasedNearestObjectFinder : MonoBehaviour
 {
 
     [SerializeField] LayerMask layers;
@@ -11,15 +11,15 @@ public class FindNearestObjectByLayer : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layers);
         if (colliders.Length > 0)
         {
-            float nearestDistance = float.MaxValue;
+            float nearestSqrDistance = float.MaxValue;
             GameObject nearestObject = null;
             for (int i = 0; i < colliders.Length; i++)
             {
-                float distance = Vector3.Distance(transform.position, colliders[i].transform.position);
-                if (distance < nearestDistance)
+                float distance = Vector3.SqrMagnitude(colliders[i].transform.position - transform.position);
+                if (distance < nearestSqrDistance)
                 {
                     nearestObject = colliders[i].gameObject;
-                    nearestDistance = distance;
+                    nearestSqrDistance = distance;
                 }
             }
             return nearestObject;

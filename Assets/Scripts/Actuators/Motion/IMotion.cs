@@ -7,10 +7,10 @@ public interface IMotion
 
     void MoveTowards(Transform target, float speed, float turnSpeed);
 
-    void SlerpRotation(Quaternion quaternion, float speed);
-
     void Rotate(Vector3 eulerRotation);
 
     void Rotate(Quaternion rotation);
+
+    void SlerpRotation(Quaternion quaternion, float speed);
 
 }

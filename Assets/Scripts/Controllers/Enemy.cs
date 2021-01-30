@@ -4,17 +4,27 @@
 public class Enemy : MonoBehaviour
 {
 
-    /// Inspector
     [SerializeField] private float speed = 10f;
 
-    /// Dependencies
     private RigidbodyMotion rigidbodyMotion;
     private Engine engine;
+    private HealthBehaviour healthBehaviour;
 
     private void Awake()
     {
         rigidbodyMotion = GetComponent<RigidbodyMotion>();
         engine = GetComponentInChildren<Engine>();
+        healthBehaviour = GetComponent<HealthBehaviour>();
+    }
+
+    private void OnEnable()
+    {
+        healthBehaviour.OnChange += OnHealthChange;
+    }
+
+    private void OnDisable()
+    {
+        healthBehaviour.OnChange -= OnHealthChange;
     }
 
     private void Start()
@@ -33,6 +43,11 @@ public class Enemy : MonoBehaviour
     private void Move()
     {
         rigidbodyMotion.Move(Vector3.down, speed);
+    }
+
+    private void OnHealthChange(float currentHealth)
+    {
+        Debug.Log($"{name} health = " + currentHealth);
     }
 
 }

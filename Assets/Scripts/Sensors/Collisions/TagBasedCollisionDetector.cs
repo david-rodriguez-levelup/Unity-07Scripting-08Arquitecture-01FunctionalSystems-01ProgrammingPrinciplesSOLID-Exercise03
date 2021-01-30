@@ -1,33 +1,28 @@
 ﻿using System;
 using UnityEngine;
 
-public class CollisionWithLayer : MonoBehaviour
+public class TagBasedCollisionDetector : MonoBehaviour
 {
 
     public event Action<Collision> OnEnter;
     public event Action<Collision> OnExit;
 
-    [SerializeField] private LayerMask layerMask;
+    [SerializeField] private string _tag;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (ContainsLayer(collision.gameObject.layer))
+        if (collision.gameObject.CompareTag(_tag))
         {
             OnEnter?.Invoke(collision);
-        }        
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (ContainsLayer(collision.gameObject.layer))
+        if (collision.gameObject.CompareTag(_tag))
         {
             OnExit?.Invoke(collision);
         }
-    }
-
-    private bool ContainsLayer(int layer)
-    {
-        return layerMask == (layerMask | (1 << layer));
     }
 
 }

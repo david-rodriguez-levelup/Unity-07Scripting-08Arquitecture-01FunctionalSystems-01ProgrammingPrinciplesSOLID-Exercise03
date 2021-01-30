@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 472527021832427137}
   - component: {fileID: 4272776014725137567}
   - component: {fileID: -971976715420497626}
-  - component: {fileID: 3557129729764546628}
-  - component: {fileID: -3344997858313412678}
+  - component: {fileID: 8927657757187507636}
+  - component: {fileID: 2793955224354483849}
+  - component: {fileID: -4512049518622171968}
   - component: {fileID: -104512796408828188}
   - component: {fileID: 8027666936317447660}
   - component: {fileID: 2869250547574237537}
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3557129729764546628
+--- !u!114 &8927657757187507636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,14 +78,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 472527021832427138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc2de621d39c0942a12501c6c01c234, type: 3}
+  m_Script: {fileID: 11500000, guid: 685ad2d431587dd4986935bfbf0cc804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!114 &2793955224354483849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472527021832427138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be5a4d5e4cfbdd4fa813f90db42401f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
     m_Bits: 512
-  radius: 10
---- !u!114 &-3344997858313412678
+  radius: 5
+--- !u!114 &-4512049518622171968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +107,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 472527021832427138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16bfd03a1d4515469e307a9695b410d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b3028710ccf7884ba5263860fa6818e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOn: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 512

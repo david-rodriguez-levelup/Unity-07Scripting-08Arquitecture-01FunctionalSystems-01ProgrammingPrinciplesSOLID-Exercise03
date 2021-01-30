@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
-public class SpawnFromBoxCollider : MonoBehaviour
+public class BoxShapedRandomSpawner : MonoBehaviour
 {
 
     private BoxCollider boxCollider;

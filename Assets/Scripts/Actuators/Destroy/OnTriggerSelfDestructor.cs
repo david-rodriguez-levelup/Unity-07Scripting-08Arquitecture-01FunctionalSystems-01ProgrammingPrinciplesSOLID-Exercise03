@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SelfDestroyOnCollision : MonoBehaviour
+public class OnTriggerSelfDestructor : MonoBehaviour
 {
 
     private enum Type
@@ -8,19 +8,18 @@ public class SelfDestroyOnCollision : MonoBehaviour
         Enter,
         Exit
     }
-
-    /// Inspector   
+ 
     [SerializeField] private Type destroyOn = Type.Enter;
     [SerializeField] private LayerMask layerMask;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        DestroyIfTypeAndLayerMatch(Type.Enter, collision.gameObject.layer);
+        DestroyIfTypeAndLayerMatch(Type.Enter, collider.gameObject.layer);
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collider)
     {
-        DestroyIfTypeAndLayerMatch(Type.Exit, collision.gameObject.layer);
+        DestroyIfTypeAndLayerMatch(Type.Exit, collider.gameObject.layer);
     }
 
     private void DestroyIfTypeAndLayerMatch(Type type, int layer)
