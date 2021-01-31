@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: -2027807650568426138}
-  - component: {fileID: -1780838315969716158}
-  - component: {fileID: 13600000}
+  - component: {fileID: 3718034293660208685}
+  - component: {fileID: 7278307630291164609}
+  - component: {fileID: 256889451462880443}
+  - component: {fileID: 3530932944393522411}
   - component: {fileID: 5400000}
   m_Layer: 10
-  m_Name: Laser
+  m_Name: ShellProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +36,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2027807650568426138
+--- !u!114 &3718034293660208685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685ad2d431587dd4986935bfbf0cc804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &7278307630291164609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,7 +68,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2560
---- !u!114 &-1780838315969716158
+--- !u!114 &256889451462880443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,8 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeout: 2
---- !u!136 &13600000
-CapsuleCollider:
+--- !u!135 &3530932944393522411
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -74,9 +91,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.03
-  m_Height: 0.3
-  m_Direction: 1
+  serializedVersion: 2
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5400000
 Rigidbody:
@@ -153,7 +169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e27380ee68aa4a219b4db9018e7da31, type: 2}
+  - {fileID: 2100000, guid: eda5119056cc0c742ae82a5f2f1e8cb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

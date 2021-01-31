@@ -92,8 +92,10 @@ GameObject:
   - component: {fileID: 432640}
   - component: {fileID: 342612717072699229}
   - component: {fileID: 4467113387032685301}
+  - component: {fileID: 880440730598765923}
+  - component: {fileID: -3269787771143398905}
+  - component: {fileID: -1983167476242552059}
   - component: {fileID: 432843465732029767}
-  - component: {fileID: -2138465392867727259}
   - component: {fileID: 8826228217712027461}
   - component: {fileID: 3173040048564773064}
   m_Layer: 9
@@ -144,6 +146,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &880440730598765923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685ad2d431587dd4986935bfbf0cc804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &-3269787771143398905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7556b9705f6e18540bd7597e256612e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  relativeDamageRatio: 0.5
+--- !u!114 &-1983167476242552059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9890fd8f2beae4c8e6abcfa8e0dccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPrefab: {fileID: 100012, guid: 160925a6fe2664f2a978566b819f0af0, type: 3}
 --- !u!114 &432843465732029767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,22 +205,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4096
---- !u!114 &-2138465392867727259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16bfd03a1d4515469e307a9695b410d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyOn: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1280
 --- !u!65 &8826228217712027461
 BoxCollider:
   m_ObjectHideFlags: 0

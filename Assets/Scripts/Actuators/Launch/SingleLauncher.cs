@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
-public class SingleLauncher : BaseLauncher
+public class SingleLauncher : AbstractLauncher
 {
 
     public override void Launch(Rigidbody projectilePrefab)

@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4803253534874587454, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
+      propertyPath: timeBetweenEnemies
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5811962143037409045, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -4,7 +4,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
 
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private float timeBetweenEnemies;
 
     private BoxShapedRandomSpawner boxShapedRandomSpawner;
@@ -22,7 +22,8 @@ public class Level : MonoBehaviour
     {
         while (true)
         {
-            GameObject enemy = boxShapedRandomSpawner.Spawn(enemyPrefab);
+            int random = Random.Range(0, enemyPrefabs.Length);
+            GameObject enemy = boxShapedRandomSpawner.Spawn(enemyPrefabs[random]);
             enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y, 0f);
 
             yield return new WaitForSeconds(timeBetweenEnemies);

@@ -150,8 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d959e5a251baf304b9c5cd10e87b289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 178266, guid: 28d007e82316709418a48ce0dccdf165, type: 3}
-  timeBetweenEnemies: 1
+  enemyPrefabs:
+  - {fileID: 178266, guid: 28d007e82316709418a48ce0dccdf165, type: 3}
+  - {fileID: 178266, guid: e299412adeffb274983d199b552d1980, type: 3}
+  timeBetweenEnemies: 5
 --- !u!33 &5811962143037409050
 MeshFilter:
   m_ObjectHideFlags: 0

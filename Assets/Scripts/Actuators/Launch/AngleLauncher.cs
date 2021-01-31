@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class AngleLauncher : BaseLauncher
+public class AngleLauncher : AbstractLauncher
 {
 
     [SerializeField]

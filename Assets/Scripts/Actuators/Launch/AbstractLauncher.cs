@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class BaseLauncher : MonoBehaviour, ILauncher
+public abstract class AbstractLauncher : MonoBehaviour, ILauncher
 {
     [SerializeField]
     protected float launchForce = 10f;

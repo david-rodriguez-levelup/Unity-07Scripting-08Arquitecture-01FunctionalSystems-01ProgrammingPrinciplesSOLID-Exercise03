@@ -1,6 +1,10 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 [RequireComponent(typeof(RigidbodyMotion))]
+[RequireComponent(typeof(Engine))]
+[RequireComponent(typeof(DefaultHealthState))]
+[RequireComponent(typeof(DefaultSpawner))]
 public class Enemy : MonoBehaviour
 {
 
@@ -8,23 +12,25 @@ public class Enemy : MonoBehaviour
 
     private RigidbodyMotion rigidbodyMotion;
     private Engine engine;
-    private HealthBehaviour healthBehaviour;
+    private DefaultHealthState healthBehaviour;
+    private DefaultSpawner explosionSpawner;
 
     private void Awake()
     {
         rigidbodyMotion = GetComponent<RigidbodyMotion>();
         engine = GetComponentInChildren<Engine>();
-        healthBehaviour = GetComponent<HealthBehaviour>();
+        healthBehaviour = GetComponent<DefaultHealthState>();
+        explosionSpawner = GetComponent<DefaultSpawner>();
     }
 
     private void OnEnable()
     {
-        healthBehaviour.OnChange += OnHealthChange;
+        healthBehaviour.OnMinHealthAchieved += Explode;
     }
 
     private void OnDisable()
     {
-        healthBehaviour.OnChange -= OnHealthChange;
+        healthBehaviour.OnMinHealthAchieved -= Explode;
     }
 
     private void Start()
@@ -45,9 +51,10 @@ public class Enemy : MonoBehaviour
         rigidbodyMotion.Move(Vector3.down, speed);
     }
 
-    private void OnHealthChange(float currentHealth)
+    private void Explode()
     {
-        Debug.Log($"{name} health = " + currentHealth);
+        explosionSpawner.Spawn();
+        Destroy(gameObject);
     }
 
 }

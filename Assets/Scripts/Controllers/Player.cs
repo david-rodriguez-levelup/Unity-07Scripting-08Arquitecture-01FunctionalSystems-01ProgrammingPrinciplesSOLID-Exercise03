@@ -3,22 +3,34 @@
 [RequireComponent(typeof(RigidbodyMotion))]
 public class Player : MonoBehaviour
 {
-    /// Inspector
+
     [SerializeField] private string axisName = "Horizontal";
     [SerializeField] private float speed = 10f;
     [SerializeField] private float angle = 10f;
 
-    /// Dependencies
     private RigidbodyMotion rigidbodyMotion;
+    private DefaultHealthState healthState;
     private Engine engine;
+    private ParticleSystem damageEffect;
 
-    /// Internal
     private float horizontalInput;
 
     private void Awake()
     {
         rigidbodyMotion = GetComponent<RigidbodyMotion>();
+        healthState = GetComponent<DefaultHealthState>();
         engine = GetComponentInChildren<Engine>();
+        damageEffect = transform.Find("[DamageEffect]").GetComponent<ParticleSystem>();
+    }
+
+    private void OnEnable()
+    {
+        healthState.OnDamageInflicted += PlayDamageEffect;
+    }
+
+    private void OnDisable()
+    {
+        healthState.OnDamageInflicted -= PlayDamageEffect;
     }
 
     private void Update()
@@ -43,6 +55,11 @@ public class Player : MonoBehaviour
     {
         rigidbodyMotion.Move(Vector3.right * horizontalInput, speed);
         rigidbodyMotion.Rotate(new Vector3(0f, -horizontalInput * angle, 0f));
-    }    
+    }
+
+    private void PlayDamageEffect(float damage, float currentHealth)
+    {
+        damageEffect.Play();
+    }
 
 }
