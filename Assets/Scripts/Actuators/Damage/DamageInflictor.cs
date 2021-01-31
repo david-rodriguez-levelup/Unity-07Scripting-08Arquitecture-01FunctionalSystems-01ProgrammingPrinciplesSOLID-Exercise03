@@ -32,7 +32,7 @@ public class DamageInflictor : MonoBehaviour
         DefaultHealthState healthBehaviour = collision.gameObject.GetComponent<DefaultHealthState>();
         if (healthBehaviour != null)
         {
-//print($"{name} manda {damage} de daño a {collision.gameObject.name}");
+            //print($"{name} manda {damage} de daño a {collision.gameObject.name}");
             healthBehaviour.TryInflictDamage(damage);
         }       
     }

@@ -85,9 +85,13 @@ public class DefaultHealthState : MonoBehaviour
         currentHealth += amount;
     }
 
+    #region Gizmos
+
     private void OnDrawGizmos()
-    {
+    {      
         Handles.Label(transform.position, currentHealth.ToString());
     }
+
+    #endregion
 
 }
